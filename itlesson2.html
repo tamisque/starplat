@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Введение в веб-разработку</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #808080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .lesson-title {
+            font-size: 2em;
+            color: #660033;
+            margin-bottom: 20px;
+        }
+
+        .lesson-content {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .lesson-list {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .lesson-list li {
+            background-color: #f0f0f0;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .lesson-list li a {
+            text-decoration: none;
+            color: #660033;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .lesson-list li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #334d00;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Введение в веб-разработку</h1>
+    </header>
+
+    <div class="container">
+        <div class="lesson-title">Темы по Введению в веб-разработку:</div>
+        <ul class="lesson-list">
+            <li><a href="#overview">Обзор веб-разработки</a></li>
+            <li><a href="#key-technologies">Основные технологии веб-разработки</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+            <li><a href="#resources">Ресурсы для изучения</a></li>
+        </ul>
+
+        <div id="overview" class="lesson-content">
+            <h3>Обзор веб-разработки</h3>
+            <p>Веб-разработка — это процесс создания и поддержки веб-сайтов и веб-приложений. Это охватывает все аспекты работы с веб-технологиями, включая как фронтенд (внешняя часть, которую видит пользователь), так и бэкенд (серверная часть, которая обрабатывает запросы и данные).</p>
+        </div>
+
+        <div id="key-technologies" class="lesson-content">
+            <h3>Основные технологии веб-разработки:</h3>
+            <p>Существует три основные технологии, используемые в веб-разработке:</p>
+            <ul>
+                <li><b>HTML:</b> Язык разметки для создания структуры веб-страниц.</li>
+                <li><b>CSS:</b> Язык стилей для оформления и визуализации веб-страниц.</li>
+                <li><b>JavaScript:</b> Язык программирования для добавления интерактивности на веб-страницы.</li>
+            </ul>
+        </div>
+
+        <div id="html" class="lesson-content">
+            <h3>HTML (HyperText Markup Language)</h3>
+            <p>HTML — это стандартный язык разметки, который используется для создания и структурирования контента на веб-страницах. HTML состоит из различных элементов, которые описывают заголовки, параграфы, изображения, ссылки и другие элементы. Например:</p>
+            <pre><code>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Пример HTML</title>
+</head>
+<body>
+    <h1>Добро пожаловать на мой сайт!</h1>
+    <p>Это пример параграфа.</p>
+</body>
+</html>
+            </code></pre>
+        </div>
+
+        <div id="css" class="lesson-content">
+            <h3>CSS (Cascading Style Sheets)</h3>
+            <p>CSS используется для описания внешнего вида и форматирования HTML-документов. С его помощью можно задавать цвета, шрифты, размеры, отступы и другие визуальные характеристики. Пример CSS-кода:</p>
+            <pre><code>
+h1 {
+    color: green;
+    font-size: 2em;
+}
+p {
+    color: gray;
+    font-size: 1em;
+}
+            </code></pre>
+        </div>
+
+        <div id="javascript" class="lesson-content">
+            <h3>JavaScript</h3>
+            <p>JavaScript — это язык программирования, который позволяет добавлять интерактивность на веб-страницы. С его помощью можно создавать анимации, обрабатывать события и взаимодействовать с пользователем. Пример JavaScript-кода:</p>
+            <pre><code>
+document.getElementById("myButton").onclick = function() {
+    alert("Кнопка нажата!");
+}
+            </code></pre>
+        </div>
+
+        <div id="resources" class="lesson-content">
+            <h3>Ресурсы для изучения</h3>
+            <p>Существует множество онлайн-ресурсов для изучения веб-разработки:</p>
+            <ul>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> — подробные учебники по HTML, CSS и JavaScript.</li>
+                <li><a href="https://developer.mozilla.org/ru/docs/Web" target="_blank">MDN Web Docs</a> — документация от Mozilla, охватывающая все аспекты веб-разработки.</li>
+                <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a> — интерактивные курсы по программированию и веб-разработке.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; STAR Platform by Tamila Anarbayeva
+    </div>
+
+</body>
+</html>

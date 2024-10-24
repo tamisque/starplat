@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы программирования</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #808080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .lesson-title {
+            font-size: 2em;
+            color: #660033;
+            margin-bottom: 20px;
+        }
+
+        .lesson-content {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .lesson-list {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .lesson-list li {
+            background-color: #f0f0f0;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .lesson-list li a {
+            text-decoration: none;
+            color: #660033;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .lesson-list li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #334d00;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Основы программирования</h1>
+    </header>
+
+    <div class="container">
+        <div class="lesson-title">Темы по Основам программирования:</div>
+        <ul class="lesson-list">
+            <li><a href="#basic-concepts">Основные концепции программирования</a></li>
+            <li><a href="#additional-concepts">Дополнительные концепции</a></li>
+            <li><a href="#key-terms">Ключевые термины</a></li>
+            <li><a href="#learning-resources">Где начать учить программирование</a></li>
+        </ul>
+
+        <div id="basic-concepts" class="lesson-content">
+            <h3>Основные концепции программирования:</h3>
+            <p>Программирование — это процесс создания программного обеспечения. Оно включает в себя написание кода на различных языках программирования, таких как Python, Java, C++, и других. Программирование позволяет решать различные задачи и автоматизировать процессы, что делает его важным навыком в современном мире.</p>
+            <ul>
+                <li><b>Переменные:</b> Переменные используются для хранения данных, которые могут изменяться во время выполнения программы. Каждая переменная имеет имя и тип данных. Примеры типов данных: целые числа, строки, булевы значения.
+                    <pre><code> 
+x = 10  # целое число
+name = "Tamila"  # строка
+is_student = True  # булево значение
+                    </code></pre>
+                </li>
+                <li><b>Условия:</b> Условия позволяют выполнять различные действия в зависимости от заданных условий. Условные конструкции помогают управлять потоком выполнения программы.
+                    <pre><code>
+if x > 5:
+    print("x больше 5")
+else:
+    print("x меньше или равно 5")
+                    </code></pre>
+                </li>
+                <li><b>Циклы:</b> Циклы используются для повторения действий, что позволяет избежать дублирования кода. Существует несколько видов циклов, например, <i>for</i> и <i>while</i>.
+                    <pre><code>
+for i in range(5):
+    print(i)  # выводит числа от 0 до 4
+                    </code></pre>
+                </li>
+                <li><b>Функции:</b> Функции помогают организовать код и повторно использовать его. Функции могут принимать аргументы и возвращать значения.
+                    <pre><code>
+def greet(name):
+    return f"Привет, {name}!"
+
+print(greet("Tamila"))  # выводит "Привет, Tamila!"
+                    </code></pre>
+                </li>
+            </ul>
+        </div>
+
+        <div id="additional-concepts" class="lesson-content">
+            <h3>Дополнительные концепции:</h3>
+            <ul>
+                <li><b>Структуры данных:</b> Используются для организации и хранения данных, например, списки, кортежи, множества и словари в Python.</li>
+                <li><b>Объектно-ориентированное программирование (ООП):</b> Подход, который позволяет организовать код с помощью объектов и классов. Это помогает моделировать реальные сущности.</li>
+                <li><b>Алгоритмы:</b> Это последовательности действий для решения конкретной задачи. Алгоритмы могут быть простыми, например, сортировка, или сложными, например, алгоритмы машинного обучения.</li>
+            </ul>
+        </div>
+
+        <div id="key-terms" class="lesson-content">
+            <h3>Ключевые термины в программировании:</h3>
+            <ul>
+                <li><b>Компилятор:</b> Программа, которая переводит код на высоком уровне в машинный код.</li>
+                <li><b>Интерпретатор:</b> Программа, которая выполняет код построчно, переводя его в машинный код в процессе выполнения.</li>
+                <li><b>IDE (Интегрированная среда разработки):</b> Программное обеспечение, которое предоставляет удобные инструменты для написания и отладки кода.</li>
+                <li><b>Библиотека:</b> Набор преднаписанных функций и методов, которые можно использовать в своем коде для упрощения разработки.</li>
+                <li><b>API (Интерфейс прикладного программирования):</b> Набор правил и инструментов, позволяющих одной программе взаимодействовать с другой.</li>
+                <li><b>Тестирование:</b> Процесс проверки программного обеспечения на наличие ошибок и соответствие требованиям.</li>
+            </ul>
+        </div>
+
+        <div id="learning-resources" class="lesson-content">
+            <h3>Где начать учить программирование:</h3>
+            <p>Существует множество онлайн-ресурсов для изучения программирования. Вот некоторые из них:</p>
+            <ul>
+                <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a> — интерактивные курсы по программированию.</li>
+                <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> — бесплатные уроки по веб-разработке и программированию.</li>
+                <li><a href="https://www.khanacademy.org/computing/computer-programming" target="_blank">Khan Academy</a> — курсы по программированию для начинающих.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; STAR Platform by Tamila Anarbayeva
+    </div>
+
+</body>
+</html>

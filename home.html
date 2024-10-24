@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAR | Образовательная платформа</title>
+       
+
+    <style>
+        body {
+            font-family: Copperplate, Papyrus, fantasy;
+            background-color: #ffffe6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #334d00
+            color: white;
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+
+        }
+
+        .subjects-grid {
+            font-family: Copperplate, Papyrus, fantasy;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+
+        }
+
+        .subject-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            font-family: Copperplate, Papyrus, fantasy;
+        }
+
+        .subject-card h2 {
+            color: #336600;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            
+
+        }
+
+        .subject-card p {
+            color: #555;
+            font-size: 1em;
+            margin-bottom: 20px;
+  
+        }
+
+        .subject-card a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #336600;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            
+        }
+
+        .subject-card a:hover {
+            background-color: #334d00;
+        }
+
+        .footer {
+            background-color: #334d00;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+
+        }
+
+        /* Секция волонтеров */
+        .volunteers-section {
+            margin-top: 50px;
+            text-align: center;
+            font-family: Copperplate, Papyrus, fantasy;
+        }
+
+        .volunteers-section h2 {
+            color: #336600;
+            font-size: 2em;
+
+        }
+
+        .volunteer-carousel {
+            position: relative;
+            width: 300px;
+            margin: 0 auto;
+            padding-bottom: 20px; /* Добавляем отступ снизу, чтобы текст не сливался с изображением */
+        }
+
+        .volunteer-carousel img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .volunteer-carousel .arrow-left,
+        .volunteer-carousel .arrow-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #334d00;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+
+        }
+
+        .volunteer-carousel .arrow-left {
+            left: -40px;
+        }
+
+        .volunteer-carousel .arrow-right {
+            right: -40px;
+        }
+
+        .volunteer-text {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Кнопка прокрутки */
+        .scroll-button {
+            background-color: #334d00;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        /* Текст "with love, STAR" */
+        .with-love {
+            margin-top: 40px;
+            font-size: 1.5em;
+            color: #336600;
+            text-align: center;
+            font-family: Copperplate, Papyrus, fantasy;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>STAR</h1>
+    </header>
+
+    <div class="container">
+        <!-- Кнопка для прокрутки к секции волонтеров -->
+        <div style="text-align: center; margin: 20px 0;">
+            <span class="scroll-button" onclick="scrollToVolunteers()">Volunteers</span>
+
+        </div>
+
+        <div class="subjects-grid">
+            <div class="subject-card">
+                <h2>English</h2>
+                <p>Изучайте английский язык с интересными уроками и практиками.</p>
+                <a href="english.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>Geography</h2>
+                <p>Узнайте больше о нашей планете и географических особенностях.</p>
+                <a href="geography.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>IT</h2>
+                <p>Углубитесь в мир информационных технологий и программирования.</p>
+                <a href="it.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>Physics</h2>
+                <p>Изучайте законы природы и основные концепции физики.</p>
+                <a href="physic.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>Mathematics</h2>
+                <p>Развивайте свои математические навыки с подробными уроками.</p>
+                <a href="math.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>World History</h2>
+                <p>Изучайте важные исторические события и процессы.</p>
+                <a href="wh.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>Chemistry</h2>
+                <p>Изучайте состав, свойства и изменения веществ.</p>
+                <a href="chemistry.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>Biology</h2>
+                <p>Узнайте о живых организмах и их взаимодействии с окружающей средой.</p>
+                <a href="biology.html">Перейти к урокам</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Секция волонтеров -->
+    <div class="volunteers-section" id="volunteers">
+        <h2>Our volunteers</h2>
+        <div class="volunteer-carousel">
+            <img id="volunteerImage" src="volunteer1.jpg" alt="Volunteer 1">
+            <button class="arrow-left" onclick="prevVolunteer()">&#10094;</button>
+            <button class="arrow-right" onclick="nextVolunteer()">&#10095;</button>
+        </div>
+        <div class="volunteer-text" id="volunteerText">Tamila Anarbayeva. Founder</div>
+    </div>
+
+    <!-- Текст "with love, STAR" -->
+    <div class="with-love">
+        with love, STAR
+    </div>
+
+    <div class="footer">
+        &copy; STAR Platform by Tamila Anarbayeva
+    </div>
+
+    <script>
+        // Скрипт для автоматической прокрутки к секции волонтеров
+        function scrollToVolunteers() {
+            document.getElementById('volunteers').scrollIntoView({ behavior: 'smooth' });
+        }
+
+// Данные волонтеров
+const volunteers = [
+    { image: 'volunteer1.jpg', text: 'Tamila Anarbayeva. Founder' },
+    { image: 'volunteer2.jpg', text: 'Elizaveta Partolina. Marketing' },
+    { image: 'volunteer3.jpg', text: 'Aidana Kurmanbayeva. Marketing' },
+    { image: 'volunteer25.jpg', text: 'Zakhro Akhmedova. Marketing' },
+    { image: 'volunteer4.jpg', text: 'Dimash Arystanbekuly. English' },
+    { image: 'volunteer5.jpg', text: 'Dariya Munich. Designer' },
+    { image: 'volunteer19.jpg', text: 'Grakova Zlata. Data Analyst' },
+    { image: 'volunteer18.jpg', text: 'Shaimerdenova Asylzhan. English' },
+    { image: 'volunteer6.jpg', text: 'Miras Nurlanov. Chemistry' },
+    { image: 'volunteer7.jpg', text: 'Nadezhda Dyakonova. Designer' },
+    { image: 'volunteer8.jpg', text: 'Gulden Kamal. Chemistry' },
+    { image: 'volunteer9.jpg', text: 'Rafael Pogosian. Math' },
+    { image: 'volunteer10.jpg', text: 'Varvara Charnavok. Data Analyst' },
+    { image: 'volunteer11.jpg', text: 'Alikhan Asanbayev. Physics' },
+    { image: 'volunteer27.jpg', text: 'Aizhan Jambulatova. Marketing' },
+    { image: 'volunteer12.jpg', text: 'Nuraly Isabek. History. IT. English' },
+    { image: 'volunteer13.jpg', text: 'Zamzama Habibzada. Math' },
+    { image: 'volunteer14.jpg', text: 'Nika Gavrina. Marketing' },
+    { image: 'volunteer29.jpg', text: 'Vira Kravchenko. Marketing' },
+    { image: 'volunteer15.jpg', text: 'Adelina Timonina. Designer' },
+    { image: 'volunteer16.jpg', text: 'Alexandra Berseneva. Designer' },
+    { image: 'volunteer17.jpg', text: 'Bakdaulet Kanatov. English. Math. History' },
+    { image: 'volunteer14.jpg', text: 'Nika Gavrina. Marketing' },
+    { image: 'volunteer20.jpg', text: 'Galkova Christina. Designer. Marketing' },
+    { image: 'volunteer21.jpg', text: 'Altynai Tursunbaeva. English' },
+    { image: 'volunteer22.jpg', text: 'Darina Yelpanova. Marketing' },
+    { image: 'volunteer23.jpg', text: 'Isabelle Pejac. Chemistry. Biology' },
+    { image: 'volunteer24.jpg', text: 'Lana Yuksel. Data Analyst' },
+    { image: 'volunteer26.jpg', text: 'Aisholpan Orazaly. Biology' },
+    { image: 'volunteer28.jpg', text: 'Igor Romanchik. Marketing. Designer' }
+];
+
+let currentVolunteerIndex = 0;
+
+// Функции для переключения волонтеров
+function showVolunteer(index) {
+    const volunteerImage = document.getElementById('volunteerImage');
+    const volunteerText = document.getElementById('volunteerText');
+    volunteerImage.src = volunteers[index].image;
+    volunteerText.textContent = volunteers[index].text;
+}
+
+function prevVolunteer() {
+    currentVolunteerIndex = (currentVolunteerIndex === 0) ? volunteers.length - 1 : currentVolunteerIndex - 1;
+    showVolunteer(currentVolunteerIndex);
+}
+
+function nextVolunteer() {
+    currentVolunteerIndex = (currentVolunteerIndex === volunteers.length - 1) ? 0 : currentVolunteerIndex + 1;
+    showVolunteer(currentVolunteerIndex);
+}
+    </script>
+
+</body>
+</html>

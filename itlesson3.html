@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы работы с базами данных</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #808080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .lesson-title {
+            font-size: 2em;
+            color: #660033;
+            margin-bottom: 20px;
+        }
+
+        .lesson-content {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .lesson-list {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .lesson-list li {
+            background-color: #f0f0f0;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .lesson-list li a {
+            text-decoration: none;
+            color: #660033;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .lesson-list li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #334d00;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Основы работы с базами данных</h1>
+    </header>
+
+    <div class="container">
+        <div class="lesson-title">Темы по Основам работы с базами данных:</div>
+        <ul class="lesson-list">
+            <li><a href="#overview">Обзор баз данных</a></li>
+            <li><a href="#dbms">Системы управления базами данных (СУБД)</a></li>
+            <li><a href="#tables">Таблицы и их структура</a></li>
+            <li><a href="#queries">Запросы и язык SQL</a></li>
+            <li><a href="#normalization">Нормализация баз данных</a></li>
+            <li><a href="#resources">Ресурсы для изучения</a></li>
+        </ul>
+
+        <div id="overview" class="lesson-content">
+            <h3>Обзор баз данных</h3>
+            <p>Базы данных используются для хранения и управления данными. Они позволяют эффективно организовывать, искать и изменять информацию. Применение баз данных охватывает широкий спектр приложений — от небольших личных проектов до крупных корпоративных систем.</p>
+            <p>Существует несколько типов баз данных, включая реляционные, документные, графовые и другие. Реляционные базы данных, использующие таблицы для организации данных, являются наиболее распространенными.</p>
+        </div>
+
+        <div id="dbms" class="lesson-content">
+            <h3>Системы управления базами данных (СУБД)</h3>
+            <p>Системы управления базами данных (СУБД) — это программное обеспечение, которое позволяет создавать, изменять и управлять базами данных. Они предоставляют интерфейс для работы с данными и обеспечивают их защиту и целостность. Примеры популярных СУБД:</p>
+            <ul>
+                <li><b>MySQL:</b> Одна из самых популярных реляционных СУБД, используемая во многих веб-приложениях.</li>
+                <li><b>PostgreSQL:</b> Расширяемая объектно-реляционная СУБД, известная своими мощными функциональными возможностями.</li>
+                <li><b>SQLite:</b> Легковесная СУБД, часто используемая в мобильных и десктопных приложениях.</li>
+                <li><b>MongoDB:</b> Документно-ориентированная база данных, использующая структуру JSON для хранения данных.</li>
+            </ul>
+        </div>
+
+        <div id="tables" class="lesson-content">
+            <h3>Таблицы и их структура</h3>
+            <p>В реляционных базах данных данные хранятся в таблицах. Каждая таблица состоит из строк и столбцов:</p>
+            <ul>
+                <li><b>Столбцы:</b> Определяют тип данных, которые будут храниться (например, имя, возраст, адрес).</li>
+                <li><b>Строки:</b> Каждая строка представляет собой запись или экземпляр данных (например, информация о конкретном человеке).</li>
+            </ul>
+            <p>Каждая таблица имеет первичный ключ — уникальный идентификатор для каждой записи, что обеспечивает целостность данных.</p>
+        </div>
+
+        <div id="queries" class="lesson-content">
+            <h3>Запросы и язык SQL</h3>
+            <p>Язык SQL (Structured Query Language) используется для извлечения и манипулирования данными в базах данных. Основные операции SQL включают:</p>
+            <ul>
+                <li><b>SELECT:</b> Извлечение данных из таблицы.</li>
+                <li><b>INSERT:</b> Добавление новых записей в таблицу.</li>
+                <li><b>UPDATE:</b> Обновление существующих данных в таблице.</li>
+                <li><b>DELETE:</b> Удаление записей из таблицы.</li>
+            </ul>
+            <p>Пример запроса на извлечение данных:</p>
+            <pre><code>SELECT * FROM users WHERE age &gt; 18;</code></pre>
+        </div>
+
+        <div id="normalization" class="lesson-content">
+            <h3>Нормализация баз данных</h3>
+            <p>Нормализация — это процесс оптимизации структуры таблиц для уменьшения избыточности данных и улучшения их целостности. Нормализация включает несколько форм, каждая из которых имеет свои правила:</p>
+            <ul>
+                <li><b>Первая нормальная форма (1НФ):</b> Все поля таблицы должны содержать только атомарные (неделимые) значения.</li>
+                <li><b>Вторая нормальная форма (2НФ):</b> Все данные, не относящиеся к первичному ключу, должны зависеть от него.</li>
+                <li><b>Третья нормальная форма (3НФ):</b> Данные, не относящиеся к первичному ключу, не должны зависеть друг от друга.</li>
+            </ul>
+        </div>
+
+        <div id="resources" class="lesson-content">
+            <h3>Ресурсы для изучения</h3>
+            <p>Существует множество онлайн-ресурсов для изучения работы с базами данных:</p>
+            <ul>
+                <li><a href="https://www.w3schools.com/sql/" target="_blank">W3Schools SQL Tutorial</a> — бесплатный ресурс для изучения SQL.</li>
+                <li><a href="https://www.sqlcourse.com/" target="_blank">SQLCourse</a> — интерактивный курс по SQL.</li>
+                <li><a href="https://www.postgresql.org/docs/" target="_blank">Документация PostgreSQL</a> — официальная документация для изучения PostgreSQL.</li>
+                <li><a href="https://www.codecademy.com/learn/learn-sql" target="_blank">Codecademy SQL Course</a> — интерактивный курс по SQL.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; STAR Platform by Tamila Anarbayeva
+    </div>
+
+</body>
+</html>

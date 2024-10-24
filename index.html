@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAR | Образовательная платформа</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #336600;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .subject-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .subject-card h2 {
+            color: #336600;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .subject-card p {
+            color: #555;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .subject-card a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #336600;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .subject-card a:hover {
+            background-color: #295a00;
+        }
+
+        .footer {
+            background-color: #336600;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>STAR</h1>
+    </header>
+
+    <div class="container">
+        <div class="subjects-grid">
+            <div class="subject-card">
+                <h2>Английский</h2>
+                <p>Изучайте английский язык с интересными уроками и практиками.</p>
+                <a href="english.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>География</h2>
+                <p>Узнайте больше о нашей планете и географических особенностях.</p>
+                <a href="geography.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>IT</h2>
+                <p>Углубитесь в мир информационных технологий и программирования.</p>
+                <a href="it.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>Физика</h2>
+                <p>Изучайте законы природы и основные концепции физики.</p>
+                <a href="physic.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>Математика</h2>
+                <p>Развивайте свои математические навыки с подробными уроками.</p>
+                <a href="math.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>Всемирная история</h2>
+                <p>Изучайте важные исторические события и процессы.</p>
+                <a href="wh.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>Химия</h2>
+                <p>Изучайте состав, свойства и изменения веществ.</p>
+                <a href="chemistry.html">Перейти к урокам</a>
+            </div>
+
+            <div class="subject-card">
+                <h2>Биология</h2>
+                <p>Узнайте о живых организмах и их взаимодействии с окружающей средой.</p>
+                <a href="biology.html">Перейти к урокам</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; STAR Platform by Tamila Anarbayeva
+    </div>
+
+</body>
+</html>
